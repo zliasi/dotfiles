@@ -1,0 +1,2 @@
+colorscheme custom-ghdark
+
