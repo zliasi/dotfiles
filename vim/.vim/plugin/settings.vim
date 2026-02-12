@@ -19,6 +19,5 @@ set laststatus=2
 set noerrorbells
 set novisualbell
 
-set nocompatible
 set modeline
 set termguicolors

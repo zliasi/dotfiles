@@ -1,15 +1,29 @@
 # dotfiles
 
-Personal configuration files for vim, tmux, and bash.
+Personal configuration files managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-## Directory Structure
+## Packages
 
-- **local/** - Local machine configuration
-  - `.vimrc` - Vim configuration
-  - `.vim/` - Vim plugins and color schemes
-  - `.tmux.conf` - Tmux configuration
+| Package | Contents |
+|---------|----------|
+| `vim`   | `.vimrc`, `.vim/` (colorscheme, settings) |
+| `tmux`  | `.tmux.conf` |
+| `bash`  | `.bashrc` |
 
-- **steno/** - Steno machine configuration
-  - `.vimrc` - Vim configuration
-  - `.vim/` - Vim plugins and color schemes
-  - `.bashrc` - Bash configuration
+## Usage
+
+From the repo root, stow the packages you need:
+
+```sh
+# local machine
+stow vim tmux
+
+# HPC cluster
+stow vim bash
+```
+
+To remove symlinks:
+
+```sh
+stow -D vim tmux
+```
